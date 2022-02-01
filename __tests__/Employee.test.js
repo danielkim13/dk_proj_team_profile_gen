@@ -13,7 +13,7 @@ test("creates an employee object", () => {
 test("gets employee name", () => {
   const employee = new Employee("DK", 123, "dk@gmail.com");
 
-  expect(employee.getName()).toBe("DK");
+  expect(employee.getName()).toEqual(expect.stringContaining(employee.name.toString()));
 });
 
 // test case for getting the employee id.
@@ -27,7 +27,7 @@ test("gets employee id", () => {
 test("gets employee email", () => {
   const employee = new Employee("DK", 123, "dk@gmail.com");
 
-  expect(employee.getEmail()).toEqual(expect.any(String));
+  expect(employee.getEmail()).toEqual(expect.stringContaining(employee.email.toString()));
 });
 
 // test case for getting employee role to return as 'Employee'
