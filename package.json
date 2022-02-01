@@ -1,0 +1,25 @@
+{
+  "name": "dk_proj_team_profile_gen",
+  "version": "1.0.0",
+  "description": "<h1 align=\"center\">Hello! I'm Daniel Kim</h1> <h2 align=\"center\">Challenge #10: Object-Oriented Programming: Team Profile Generator</h2>",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielkim13/dk_proj_team_profile_gen.git"
+  },
+  "author": "dk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danielkim13/dk_proj_team_profile_gen/issues"
+  },
+  "homepage": "https://github.com/danielkim13/dk_proj_team_profile_gen#readme",
+  "dependencies": {
+    "inquirer": "^8.2.0"
+  },
+  "devDependencies": {
+    "jest": "^27.4.7"
+  }
+}

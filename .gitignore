@@ -1,3 +1,4 @@
-# node modules and mac specific files to ignore.
+# node modules and mac specific files to ignore. in addition dist folder ignore
 node_modules/
 .DS_Store
+dist/
