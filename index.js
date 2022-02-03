@@ -7,6 +7,9 @@ const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 
+// required team page.
+const generateTeamPage = require("./src/template");
+
 // Team array where data will be pushed to.
 const teamArray = [];
 
@@ -203,4 +206,5 @@ promptManager()
   .then(promptEmployee)
   .then((teamArray) => {
     generateTeamPage(teamArray);
+    console.log(generateTeamPage());
   });
