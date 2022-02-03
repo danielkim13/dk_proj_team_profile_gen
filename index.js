@@ -202,5 +202,5 @@ const promptEmployee = () => {
 promptManager()
   .then(promptEmployee)
   .then((teamArray) => {
-    writeHTML(teamArray);
+    generateTeamPage(teamArray);
   });
