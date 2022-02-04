@@ -2,7 +2,7 @@ function employeeCard(teamData) {
   const cardArray = [];
 
   const managerCard = teamData
-    .filter((manager) => manager.getRole() === "Manager")
+    .filter((employee) => employee.getRole() === "Manager")
     .map(({ name, id, email, officeNumber }) => {
       return `
           <div class="column is-one-quarter">
@@ -34,7 +34,7 @@ function employeeCard(teamData) {
   cardArray.push(managerCard);
 
   const engineerCard = teamData
-    .filter((engineer) => engineer.getRole() === "Engineer")
+    .filter((employee) => employee.getRole() === "Engineer")
     .map(({ name, id, email, github }) => {
       return `
       <div class="column is-one-quarter">
@@ -66,7 +66,7 @@ function employeeCard(teamData) {
   cardArray.push(engineerCard);
 
   const internCard = teamData
-    .filter((intern) => intern.getRole() === "Intern")
+    .filter((employee) => employee.getRole() === "Intern")
     .map(({ name, id, email, school }) => {
       return `
     <div class="column is-one-quarter">
