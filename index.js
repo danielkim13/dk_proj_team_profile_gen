@@ -181,22 +181,21 @@ const promptEmployee = () => {
     .then((employeeData) => {
       const { billet, name, id, email, github, school, addEmployee } = employeeData;
 
-      let employee;
+      let employeeObj;
 
       if (billet === "Engineer") {
-        employee = new Engineer(name, id, email, github);
+        employeeObj = new Engineer(name, id, email, github);
       }
 
       if (billet === "Intern") {
-        employee = new Intern(name, id, email, school);
+        employeeObj = new Intern(name, id, email, school);
       }
 
-      teamArray.push(employee);
+      teamArray.push(employeeObj);
 
       if (addEmployee) {
         return promptEmployee();
       } else {
-        // generate HTML file.
         return teamArray;
       }
     });
@@ -205,6 +204,18 @@ const promptEmployee = () => {
 promptManager()
   .then(promptEmployee)
   .then((teamArray) => {
-    generateTeamPage(teamArray);
-    console.log(generateTeamPage());
+    console.log(teamArray);
+    return generateTeamPage(teamArray);
+  })
+  .then((HTMLpage) => {
+    fs.writeFile("./dist/index.html", HTMLpage, (err) => {
+      if (err) {
+        throw "Something is wrong. Try again!";
+      } else {
+        console.log("Team profile page generated!");
+      }
+    }).catch((err) => {
+      console.log(err);
+    });
   });
+
