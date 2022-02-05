@@ -3,7 +3,7 @@
 
 <hr />
 
-### 👨‍💻This project repo can be found at <mark>https://github.com/danielkim13/dk_proj_team_profile_gen/</mark>
+### 👨‍💻This project repo can be found at https://github.com/danielkim13/dk_proj_team_profile_gen/
 
 ### 📫How to reach me **daniel.d.kim13@gmail.com**
 
@@ -66,13 +66,9 @@ SO THAT I have quick access to their emails and GitHub profiles
 ## Installation
 
 - Step 1. Clone the repo to your local machine
-- Step 2. Initialize npm on your root folder.
+- Step 2. install npm
   ```
-  npm init
-  ```
-- step 3. Install inquirer npm (jest npm is optional if you would like to run test)
-  ```
-  npm i inquirer
+  npm i
   ```
 
 ## A walkthrough video
