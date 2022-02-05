@@ -204,7 +204,6 @@ const promptEmployee = () => {
 promptManager()
   .then(promptEmployee)
   .then((teamArray) => {
-    console.log(teamArray);
     return generateTeamPage(teamArray);
   })
   .then((HTMLpage) => {
@@ -214,8 +213,8 @@ promptManager()
       } else {
         console.log("Team profile page generated!");
       }
-    }).catch((err) => {
-      console.log(err);
     });
+  })
+  .catch((err) => {
+    console.log(err);
   });
-

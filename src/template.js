@@ -2,7 +2,7 @@ function employeeCard(teamData) {
   const cardArray = [];
 
   const managerCard = teamData
-    .filter((employee) => employee.getRole() === "Manager")
+    .filter((employee) => employee.constructor.name === "Manager")
     .map(({ name, id, email, officeNumber }) => {
       return `
           <div class="column is-one-quarter">
@@ -15,14 +15,14 @@ function employeeCard(teamData) {
                      </figure>
                    </div>
                    <div class="media-content">
-                     <p class="title is-4">${name}</p>
                      <p class="title is-4">Manager</p>
+                     <p class="title is-4">${name}</p>
                      <p class="subtitle is-6">ID # : ${id}</p>
                    </div>
                  </div>
    
                  <div class="content">
-                   <a href="mailto:${email}">${email}</a>
+                   <p>E-mail: <a href="mailto:${email}">${email}</a></p>
                    <p>Office Number : ${officeNumber}</p>
                  </div>
                </div>
@@ -34,7 +34,7 @@ function employeeCard(teamData) {
   cardArray.push(managerCard);
 
   const engineerCard = teamData
-    .filter((employee) => employee.getRole() === "Engineer")
+    .filter((employee) => employee.constructor.name === "Engineer")
     .map(({ name, id, email, github }) => {
       return `
       <div class="column is-one-quarter">
@@ -47,26 +47,27 @@ function employeeCard(teamData) {
                      </figure>
                    </div>
                    <div class="media-content">
-                     <p class="title is-4">${name}</p>
                      <p class="title is-4">Engineer</p>
+                     <p class="title is-4">${name}</p>
                      <p class="subtitle is-6">ID # : ${id}</p>
                    </div>
                  </div>
-   
+  
                  <div class="content">
-                   <a href="mailto:${email}">${email}</a>
+                   <p>E-mail: <a href="mailto:${email}">${email}</a></p>
                    <p>GitHub username : <a href="https://github.com/${github}">${github}</a></p>
                  </div>
                </div>
              </div>
            </div>
   `;
-    });
+    })
+    .join("");
 
   cardArray.push(engineerCard);
 
   const internCard = teamData
-    .filter((employee) => employee.getRole() === "Intern")
+    .filter((employee) => employee.constructor.name === "Intern")
     .map(({ name, id, email, school }) => {
       return `
     <div class="column is-one-quarter">
@@ -79,27 +80,26 @@ function employeeCard(teamData) {
                      </figure>
                    </div>
                    <div class="media-content">
-                     <p class="title is-4">${name}</p>
                      <p class="title is-4">Intern</p>
+                     <p class="title is-4">${name}</p>
                      <p class="subtitle is-6">ID # : ${id}</p>
                    </div>
                  </div>
    
                  <div class="content">
-                   <a href="mailto:${email}">${email}</a>
+                   <p>E-mail: <a href="mailto:${email}">${email}</a></p>
                    <p>School : ${school}</p>
                  </div>
                </div>
              </div>
            </div>
     `;
-    });
+    })
+    .join("");
 
   cardArray.push(internCard);
 
-  const eCards = cardArray.join("");
-  const teamCards = employeeCard(eCards);
-  return teamCards;
+  return cardArray.join("");
 }
 
 module.exports = (teamData) => {
