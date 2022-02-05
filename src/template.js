@@ -124,7 +124,6 @@ module.exports = (teamData) => {
          crossorigin="anonymous"
          referrerpolicy="no-referrer"
        />
-       <link rel="stylesheet" href="./style.css" />
        <title>Team Profile Page</title>
      </head>
      <body>
