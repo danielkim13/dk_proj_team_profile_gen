@@ -73,4 +73,4 @@ SO THAT I have quick access to their emails and GitHub profiles
 
 ## A walkthrough video
 
-[Team Profile Generator](https://drive.google.com/file/d/1B7k4Fph7HDU29Qn5j3Yy2Aaj3TjZc06b/view)
+[Team Profile Generator](https://watch.screencastify.com/v/PTV8KILuArw8Hfe3VOI8)
