@@ -73,4 +73,4 @@ SO THAT I have quick access to their emails and GitHub profiles
 
 ## A walkthrough video
 
-[Team Profile Generator](TBD)
+[Team Profile Generator](https://github.com/danielkim13/dk_proj_team_profile_gen/)
