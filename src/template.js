@@ -133,7 +133,7 @@ module.exports = (teamData) => {
          </div>
        </nav>
        <main>
-         <div class="columns m-1">
+         <div class="columns m-1 is-flex-wrap-wrap">
          ${employeeCard(teamData)} 
          </div>
        </main>
